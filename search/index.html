@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+
+<html>
+	<head>
+		<script language="javascript" type="text/javascript">
+			let params = new URLSearchParams(decodeURI(top.location.search));
+			var query = params.get("q");
+
+			switch (query[0]) {
+				case '/':
+					params.delete("q");
+					params.set("p", query.substring(1));
+					top.location.search = params;
+					break;
+				case ':':
+					top.location.href = "https://github.com/PaulRaffer/"+query.substring(1);
+					break;
+			}
+		</script>
+	
+		<link type="text/css" rel="stylesheet" href="../style/content.css" />
+		<link type="text/css" rel="stylesheet" href="../style/font/consolas.css" />
+		<link type="text/css" rel="stylesheet" href="../style/theme/dark.css" title="Dark-Theme" />
+		<link type="text/css" rel="alternate stylesheet" href="../style/theme/light.css" title="Light-Theme" />
+	</head>
+	
+	<body id="content_body">
+		<h1>Search - "<script>document.write(query);</script>"</h1>
+	</body>
+</html>
