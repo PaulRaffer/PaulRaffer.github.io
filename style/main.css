@@ -1,3 +1,6 @@
+/* Copyright (c) 2020 - 2021 Paul Raffer */
+
+
 * {
 	padding: 0;
 	margin: 0;
@@ -86,7 +89,7 @@ nav form {
 	display: flex;
 }
 
-#content_iframe {
+#content-iframe {
 	flex-grow: 1;
 	border: none;
 }

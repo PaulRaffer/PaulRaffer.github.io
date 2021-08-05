@@ -1,3 +1,6 @@
+<!-- Copyright (c) 2020 - 2021 Paul Raffer -->
+
+
 <!DOCTYPE html>
 
 <html>
@@ -5,81 +8,26 @@
 		<title>Paul Raffer</title>
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" /> 
 		
-		<script language="javascript" type="text/javascript" src="script/js/setActive.js"></script>
+		<script language="javascript" type="text/javascript" src="script/js/include.js"></script>
 		
 		
-		<link type="text/css" rel="stylesheet" href="style/main.css" />
-		<link type="text/css" rel="stylesheet" href="style/font/consolas.css" />
-		<link type="text/css" rel="stylesheet" href="style/theme/dark.css" title="Dark-Theme" />
-		<link type="text/css" rel="alternate stylesheet" href="style/theme/light.css" title="Light-Theme" />
+		<link type="text/css" rel="stylesheet" href="./style/main.css" />
+		<link type="text/css" rel="stylesheet" href="./style/font/consolas.css" />
+		<link type="text/css" rel="stylesheet" href="./style/theme/dark.css" title="Dark-Theme" />
+		<link type="text/css" rel="alternate stylesheet" href="./style/theme/light.css" title="Light-Theme" />
 	</head>
 
-	<body>
+	<body id="home">
 	
 		<div class="container">
-			<header>
-				<nav>
-					<ul>
-						<li id="home"><a href="?p=home">Home</a></li>
-						<li id="projects"><a href="?p=projects">Projects</a>
-							<ul>
-								<li id="libraries"><a href="?p=projects/libraries">Libraries</a>
-									<ul>
-										<li><a href="https://github.com/PaulRaffer/GPL.cpp" target="_blank">C++ Library</a></li>
-										<li><a href="https://github.com/PaulRaffer/raffer_clib" target="_blank">C Library</a></li>
-										<li><a href="https://github.com/PaulRaffer/raffer_altiumlib" target="_blank">Altium Library</a></li>
-									</ul>
-								</li>
-								<li id="programs"><a href="?p=projects/programs">Programs</a>
-									<ul>
-										<li id="games"><a href="?p=projects/programs/games">Games</a>
-											<ul>
-												<li><a href="https://github.com/PaulRaffer/Online-Poker" target="_blank">Poker</a></li>
-												<li><a href="https://github.com/PaulRaffer/Snake" target="_blank">Snake</a></li>
-											</ul>
-										</li>
-									</ul>
-								</li>
-							</ul>
-						</li>
-						<li id="contact"><a href="?p=contact">Contact</a></li>
-						<li id="blog"><a href="?p=blog">Blog</a></li>
-						<li><a href="https://github.com/PaulRaffer" target="_blank">GitHub</a></li>
-					</ul>
-					<form id="search">
-						<input type="hidden" name="p" value="search" />
-						<input type="search" id="search_input" name="q" placeholder="Search" />
-						<input type="submit" value="Go" />
-					</form>
-				</nav>
-				
-			</header>
-
-			<div id="content"><iframe id="content_iframe"></iframe></div>
-			
-			<footer>
-				<span>Copyright &copy; Paul Raffer 2020 - 2021.</span>
-				<nav>
-					
-				</nav>
-			</footer>
+			<script> include("/header.html") </script>
+			<h1>Paul Raffer</h1>
+			<script> include("./header.html") </script>
 		</div>
 		
 		<script language="javascript" type="text/javascript">
 			let params = new URLSearchParams(decodeURI(window.location.search));
-			let page = params.get("p");
 			let query = params.get("q");
-			
-			if (!page) {
-				params.set("p", "home");
-				window.location.search = params;
-			}
-			
-			document.all.content_iframe.src = page+"/index.html" + (query ? "?q="+query : "");
-			for (const p of page.split("/")) {
-				setActive(p);
-			}
-			//document.all.search_input.value = getParams()["q"];
 		</script>
 	</body>
 </html>
