@@ -11,7 +11,15 @@ a {
 	color: inherit;
 }
 
-#content-body, .active {
+/*body,*/
+.home .home,
+.projects .projects,
+	.libraries .libraries,
+	.applications .applications,
+		.games .games,
+.contact .contact,
+.blog .blog,
+.search .search {
 	background-color: #222222;
 }
 
@@ -31,6 +39,6 @@ nav li:hover, nav>form:hover {
 a[target="_blank"]:hover {
 	background-color: darkgreen;
 }
-nav ul {
+header, footer {
 	background-color: #333333;
 }

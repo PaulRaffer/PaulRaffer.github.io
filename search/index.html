@@ -1,30 +1,37 @@
+<!-- Copyright (c) 2020 - 2021 Paul Raffer -->
+
+
 <!DOCTYPE html>
 
 <html>
 	<head>
+		<script language="javascript" type="text/javascript" src="/script/js/include.js"></script>
+		
 		<script language="javascript" type="text/javascript">
 			let params = new URLSearchParams(decodeURI(top.location.search));
 			var query = params.get("q");
 
 			switch (query[0]) {
 				case '/':
-					params.delete("q");
-					params.set("p", query.substring(1));
-					top.location.search = params;
+					top.location.pathname = query.substring(1);
 					break;
 				case ':':
 					top.location.href = "https://github.com/PaulRaffer/"+query.substring(1);
 					break;
 			}
 		</script>
-	
-		<link type="text/css" rel="stylesheet" href="../style/content.css" />
-		<link type="text/css" rel="stylesheet" href="../style/font/consolas.css" />
-		<link type="text/css" rel="stylesheet" href="../style/theme/dark.css" title="Dark-Theme" />
-		<link type="text/css" rel="alternate stylesheet" href="../style/theme/light.css" title="Light-Theme" />
+
+		<title>Paul Raffer - Home</title>
+		<script> include("/style.html") </script>
 	</head>
 	
-	<body id="content_body">
-		<h1>Search - "<script>document.write(query);</script>"</h1>
+	<body class="search">
+		<script> include("/header.html") </script>
+		
+        <div class="content">
+            <h1>Search<script> document.write(query ? " - \""+query+"\"" : "") </script></h1>
+        </div>
+
+		<script> include("/footer.html") </script>
 	</body>
 </html>
