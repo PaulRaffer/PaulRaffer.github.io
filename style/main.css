@@ -1,17 +1,25 @@
 /* Copyright (c) 2020 - 2021 Paul Raffer */
-
-
 * {
+	box-sizing: border-box;
+}
+
+body, ul {
 	padding: 0;
 	margin: 0;
 }
-
+div {
+	margin: 0.5em;
+}
+div div {
+	font-size: 0.8em;
+}
+/*
 html, body {
 	width: 100%;
 	height: 100%;
 	margin: 0;
 	padding: 0;
-}
+}*/
 
 
 /*
@@ -23,12 +31,22 @@ html, body {
 	overflow: hidden;
 }*/
 
+li>a {
+	white-space: nowrap;
+}
+
 footer {
 	position: fixed;
 	bottom: 0;
+	display: flex;
 }
 
-header>nav {
+footer>span, footer>nav {
+	flex-grow: 1;
+	display: flex;
+}
+
+nav {
 	display: flex;
 }
 
@@ -38,11 +56,17 @@ nav li {
 }
 
 nav ul li a {
-	padding: 0.4em 1em 0.4em 1em;
-	min-width: 5em;
 	display: flex;
     justify-content: center;
     align-items: center;
+}
+header>nav ul li a {
+	padding: 0.4em 1em 0.4em 1em;
+	min-width: 5em;
+}
+footer>nav ul li a {
+	padding: initial;
+	min-width: 5em;
 }
 
 nav li li {

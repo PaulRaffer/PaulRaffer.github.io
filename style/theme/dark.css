@@ -4,14 +4,13 @@
 body {
 	background-color: #333333;
 	color: white;
-}
+}/**/
 
 
 a {
 	color: inherit;
 }
 
-/*body,*/
 .home .home,
 .projects .projects,
 	.libraries .libraries,
@@ -32,13 +31,12 @@ form>input[type="submit"] {
 	background-color: inherit;
 	cursor: pointer;
 }
-
+nav li {
+	background-color: #333333;
+}
 nav li:hover, nav>form:hover {
-	background-color: darkred;
+	background-color: darkred !important;
 }
 a[target="_blank"]:hover {
 	background-color: darkgreen;
-}
-header, footer {
-	background-color: #333333;
 }
