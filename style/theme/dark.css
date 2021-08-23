@@ -2,7 +2,7 @@
 
 
 body {
-	background-color: #333333;
+	background-color: #222222;
 	color: white;
 }/**/
 
@@ -16,6 +16,8 @@ a {
 	.libraries .libraries,
 	.applications .applications,
 		.games .games,
+	.books .books,
+		.polymorphism .polymorphism,
 .contact .contact,
 .blog .blog,
 .search .search {
@@ -31,7 +33,7 @@ form>input[type="submit"] {
 	background-color: inherit;
 	cursor: pointer;
 }
-nav li {
+nav, nav li {
 	background-color: #333333;
 }
 nav li:hover, nav>form:hover {
