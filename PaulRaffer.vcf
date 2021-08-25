@@ -1,0 +1,9 @@
+BEGIN:VCARD
+VERSION:3.0
+FN:Paul Raffer
+N:Raffer;Paul;;;
+EMAIL;TYPE=HOME:paul.raffer.bitfv@aleeas.com
+URL;TYPE=HOME:https://paulraffer.github.io
+SOCIALPROFILE;TYPE=GitLab:https://gitlab.com/PaulRaffer
+SOCIALPROFILE;TYPE=GitHub:https://github.com/PaulRaffer
+END:VCARD
